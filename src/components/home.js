@@ -1,10 +1,8 @@
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [value, setValue] = useState(0); // Initial value is 50
+  const [value, setValue] = useState(0);
 
   const handleSliderChange = (event) => {
     setValue(event.target.value);
@@ -17,14 +15,19 @@ const Home = () => {
 
   return (
     <div className="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-8">
-      {/* Title */}
       <div className="flex justify-center items-center py-9 font-Poppins text-lg md:text-2xl lg:text-3xl">
         <h1>Which age range applies to you?</h1>
       </div>
 
-      {/* Age Range Options */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-        {["Under 30", "Between 30-34", "Between 35-37", "Between 38-40", "Between 41-43", "Above 43"].map((ageRange, index) => (
+        {[
+          "Under 30",
+          "Between 30-34",
+          "Between 35-37",
+          "Between 38-40",
+          "Between 41-43",
+          "Above 43",
+        ].map((ageRange, index) => (
           <label key={index} className="flex items-center gap-2">
             <input
               type="radio"
@@ -37,7 +40,6 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Number of IVF Cycles */}
       <div className="flex justify-center items-center py-9 font-Poppins text-lg md:text-2xl lg:text-3xl">
         <h1>Number of IVF Cycles?</h1>
       </div>
@@ -55,7 +57,6 @@ const Home = () => {
         <div className="text-lg">Value: {value}</div>
       </div>
 
-      {/* ICSI Procedure */}
       <div className="flex justify-center items-center py-5 font-Poppins text-lg md:text-2xl lg:text-3xl">
         <h1>Have you undergone these procedures before?</h1>
       </div>
@@ -104,12 +105,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Medical Conditions */}
       <div className="flex justify-center items-center py-7 font-Poppins text-lg md:text-2xl lg:text-3xl">
         <h1>Do you have any of these medical conditions?</h1>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
-        {["PCOS", "Endometriosis", "Low Ovarian Reserve", "Male Factor Infertility"].map((condition, index) => (
+        {[
+          "PCOS",
+          "Endometriosis",
+          "Low Ovarian Reserve",
+          "Male Factor Infertility",
+        ].map((condition, index) => (
           <label key={index} className="flex items-center gap-2">
             <input
               type="checkbox"
@@ -122,7 +127,6 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Submit Button */}
       <div className="flex justify-center items-center py-7">
         <button
           type="submit"
@@ -137,4 +141,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
